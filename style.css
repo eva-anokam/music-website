@@ -1,0 +1,52 @@
+/* 
+-------------
+Custom Variables
+--------------
+*/
+:root {
+  --clr-primary: #0f0d13;
+  --clr-accent: #a238ff;
+  --clr-text: #ffffff;
+  --clr-text-family: #ff673d;
+
+  --font-family-primary: "Inter", "Arial", sans-serif;
+  --font-family-secondary: "Arial", sans-serif;
+
+  --font-size-lg: 2.5rem;
+  --font-size-md: 1.75rem;
+  --font-size-sm: 1.25rem;
+  --font-size-xs: 0.875rem;
+
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+}
+/* 
+-------------
+Resets
+--------------
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+body{
+    min-height: 100vh;
+    line-height: 1.5;
+}
