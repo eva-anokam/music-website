@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,35 +7,146 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Signika+Negative:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/764423a291.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/Deezer-Logo.png"
+      type="image/x-icon"
+    />
     <title>Music Website By Pixel Pioneers</title>
   </head>
   <body>
     <header class="header">
       <nav class="header__nav container">
-          <a href="#" class="header__logo"> 
-              <img src="./images/Deezer-Logo.png" alt="">
-              <p>DEEZER</p>
-          </a>
-          <div class="header__list-container">
-            <ul class="header__list">
-                <li><a href="#">Plans</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Music</a></li>
-            </ul>
-            <div class="header__btn-container">
-                <a href="" class="btn btn--transparent">Log in</a>
-                <a href="" class="btn btn--accent">Sign up</a>
-            </div>
+        <a href="#" class="header__logo">
+          <img src="./images/Deezer-Logo.png" alt="" />
+          <p>DEEZER</p>
+        </a>
+        <div class="header__list-container">
+          <ul class="header__list">
+            <li><a href="#">Plans</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Music</a></li>
+          </ul>
+          <div class="header__btn-container">
+            <a href="" class="btn btn--transparent">Log in</a>
+            <a href="" class="btn btn--accent">Sign up</a>
           </div>
+        </div>
+        <div class="header__icon-container">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-x hidden"></i>
+        </div>
       </nav>
     </header>
     <main>
-        <h1>Heading</h1>
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="container flow">
+          <h1 class="hero__heading">To start listening, just pick a plan</h1>
+          <div class="hero__notification">
+            <div class="notification">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Deezer Free is not available in your country. Please choose an offer and start listening.</p>
+            </div>
+            <div class="notification">
+                <i class="fa-solid fa-bell"></i>
+                <p class="notification--grey">
+                    <span>A stress-free trial</span>
+                We will remind you 7 days before your trial ends.
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offer section -->
+      <section class="offer">
+        <div class="offer-container container">
+            <!-- Premium -->
+            <div class="offer__premium offer__card flow">
+                <a href="#" class="offer__premium-heading">
+                    <h2>Premium</h2>
+                </a>
+                <p class="offer__duration">1 month free</p>
+                <p class="offer__text">Pick and play any track ad-free, plus download your favourites and listen offline. Enjoy High Fidelity sound and stream across all your devices.</p>
+                <a href="#" class="offer__link">Try for free</a>
+                <div class="offer__text-bottom">
+                    <p>then $10.99/month.</p>
+                    <p>No commitment, cancel anytime.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="control-container">
+                <label for="annual--premium" class="control">
+                        <p>
+                            Annual discount <span>-25%</span>
+                        </p>
+                        <div> <i class="fa-solid fa-chevron-down"></i></div>
+                </label>
+                <input type="checkbox" name="annual--premium" id="annual--premium" class="visually-hidden">
+                <div class="offer__premium offer__card offer--bottom flow card">
+                    <a href="#" class="offer__premium-heading">
+                        <h2 class="premium--annual">Premium annual</h2>
+                    </a>
+                    <p class="offer__duration">25% off every year</p>
+                    <p class="offer__text">All the benefits of Deezer Premium at a discounted annual price</p>
+                    <a href="#" class="offer__link">Start 1-month free trial</a>
+                    <div class="offer__text-bottom">
+                        <p><span>$131.88/year</span> $98.91/year</p>
+                        <p>1-year commitment.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Family -->
+            <div class="offer__family offer__card flow">
+                <a href="#" class="offer__family-heading">
+                    <h2>Family</h2>
+                </a>
+                <p class="offer__duration">1 month free</p>
+                <p class="offer__text">Music for everyone. Get 6 individual accounts, all with Deezer family benefits including High Fidelity sound. Listen simultaneously on multiple devices.</p>
+                <a href="#" class="offer__link">Try for free</a>
+                <div class="offer__text-bottom">
+                    <p>then $17.99/month.</p>
+                    <p>No commitment, cancel anytime.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="control-container">
+                <label for="annual--family" class="control">
+                        <p>
+                            Annual discount <span>-8%</span>
+                        </p>
+                        <div> <i class="fa-solid fa-chevron-down"></i></div>
+                </label>
+                <input type="checkbox" name="annual--family" id="annual--family" class="visually-hidden">
+                <div class="offer__family offer__card offer--bottom flow card">
+                    <a href="#" class="offer__family-heading">
+                        <h2 class="family--annual">Family annual</h2>
+                    </a>
+                    <p class="offer__duration">8% off every year</p>
+                    <p class="offer__text">All the benefits of Deezer Family at a discounted annual price</p>
+                    <a href="#" class="offer__link">Start 1-month free trial</a>
+                    <div class="offer__text-bottom">
+                        <p><span>$215.88/year</span> $196.99/year</p>
+                        <p>1-year commitment.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
