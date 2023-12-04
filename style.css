@@ -60,6 +60,7 @@ body{
     min-height: 100vh;
     line-height: 1.5;
     font-family: var(--font-family-primary);
+    margin: 0;
 }
 li{
     list-style-type: none;
@@ -112,6 +113,7 @@ header{
 }
 .header__list-container{
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 .header__list{
