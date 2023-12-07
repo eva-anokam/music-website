@@ -11,6 +11,7 @@ Custom Variables
   --clr-tertiary: #29282d;
   --clr-notification: #1b191f;
   --clr-notification-grey: #a9a6aa;
+  --clr-gift-grey: grey;
 
   --font-family-primary: "Inter", "Arial", sans-serif;
   --font-family-secondary: "Arial", sans-serif;
@@ -30,6 +31,7 @@ Custom Variables
   --space-sm: 0.5rem;
   --space-md: 0.75rem;
   --space-lg: 1rem;
+
 }
 /* 
 -------------
@@ -350,4 +352,129 @@ Offer section
 
 .offer--bottom .family--annual{
     width: 16ch;
+}
+
+/* Gift Card section */
+.gift {
+    background-color: #f5f2f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    flex-direction: column;
+}
+
+.gift_card {
+    font-size: 30px;
+    padding-left: 3rem;
+}
+
+.gift_card-heading {
+    font-size: 70px;
+    font-family: var(--font-family-hero);
+    margin-bottom: -1rem;
+}
+
+.gift_card-paragraph {
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family-secondary);
+    color: var(--clr-notification-grey);
+}
+
+.gift__link {
+    color: var(--clr-text);
+    background-color: var(--clr-primary);
+    display: inline-block;
+    text-decoration: none;
+    width: 160px;
+    height: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 13px;
+    font-size: 1rem;
+    font-weight: var(--font-weight-md);
+}
+
+.gift__link-2 {
+    color: var(--clr-primary);
+    background-color: #f5f2f8;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    height: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 13px;
+    font-weight: var(--font-weight-lg);
+}
+
+.gift__link-2:hover {
+    background-color: #c4c4c4;
+}
+
+.gift__card-container {
+    margin-top: 2rem;
+    list-style-type: none;
+    display: flex;
+    padding-right: 2.5rem;
+}
+
+.gift__card-container svg{
+    width: 230px;
+    height: 300px;
+    margin-left: -100px;
+    transition: all 0.3s linear;
+    /* background-color: var(--clr-tertiary); */
+}
+
+
+.first {
+    transform: rotate(10deg);
+    width: 230px;
+    height: 300px;
+}
+
+.first:hover,
+.first:focus {
+     transform: rotate(0deg);
+}
+
+.second {
+    z-index: 10;
+    transform: translateY(-5%);
+}
+
+.second:hover,
+.second:focus {
+    transform: scale(1.1) translateY(-10%);
+}
+
+.third {
+    transform: rotate(-10deg) translateY(20%);
+}
+
+.third:hover,
+.third:focus {
+    transform: rotate(15deg) translateX(20%);
+
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animated-element {
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@media (min-width: 950px) {
+    .gift {
+        flex-direction: row;
+    }
 }
