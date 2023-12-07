@@ -83,7 +83,7 @@ Utility classes
     margin-top: var(--flow-spacer, 2rem);
 }
 main{
-    background-color: var(--clr-primary);
+    background-color: var(--clr-notification);
 }
 /* 
 -------------
@@ -218,6 +218,11 @@ Hero section
 .notification--grey{
     color: var(--clr-notification-grey);
 }
+.lottie{
+    display: flex;
+    justify-content: center;
+}
+
 @media(min-width: 960px) {
     .hero__heading{
         font-size: 65px;
@@ -235,6 +240,7 @@ Offer section
     background-color: var(--clr-accent);
     padding: 2rem 1rem;
 }
+
 .offer-container{
     display: flex;
     flex-direction: column;
@@ -357,30 +363,40 @@ Offer section
 /* Gift Card section */
 .gift {
     background-color: #f5f2f8;
+    clip-path: ellipse(150% 50% at 48% 44%);
+}
+.gift__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 600px;
     flex-direction: column;
+    row-gap: 2rem;
+    padding-block: 4rem 10rem;
 }
-
-.gift_card {
-    font-size: 30px;
-    padding-left: 3rem;
+.gift_card{
+    text-align: center;
 }
-
 .gift_card-heading {
     font-size: 70px;
     font-family: var(--font-family-hero);
-    margin-bottom: -1rem;
 }
 
 .gift_card-paragraph {
     font-size: var(--font-size-sm);
     font-family: var(--font-family-secondary);
     color: var(--clr-notification-grey);
+    max-width: 30ch;
+    margin: 0 auto 1.5rem;
 }
-
+.gift__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: .5rem;
+}
+.gift__links a{
+    margin-inline: auto;
+}
 .gift__link {
     color: var(--clr-text);
     background-color: var(--clr-primary);
@@ -417,18 +433,18 @@ Offer section
     margin-top: 2rem;
     list-style-type: none;
     display: flex;
-    padding-right: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 2;
+    margin-left: 3rem;
 }
 
 .gift__card-container svg{
-    width: 230px;
-    height: 300px;
-    margin-left: -100px;
+    width: 100px;
+    height: 200px;
+    margin-left: -50px;
     transition: all 0.3s linear;
-    /* background-color: var(--clr-tertiary); */
 }
-
-
 .first {
     transform: rotate(10deg);
     width: 230px;
@@ -456,7 +472,7 @@ Offer section
 
 .third:hover,
 .third:focus {
-    transform: rotate(15deg) translateX(20%);
+    transform: rotate(15deg) translateX(10%);
 
 }
 
@@ -473,8 +489,147 @@ Offer section
     animation: moveUpDown 2s ease-in-out infinite;
 }
 
-@media (min-width: 950px) {
-    .gift {
+@media(min-width: 760px) {
+    .gift__card-container svg{
+        width: 200px;
+        margin-left: -70px;
+    }
+}
+
+@media (min-width: 960px) {
+    .gift__container {
+        flex-direction: row;
+        column-gap: .5rem;
+        padding-block: 10rem;
+    }
+    .gift__card-container svg{
+        width: 270px;
+        height: 250px;
+        margin-left: -100px;
+    }
+}
+
+/* 
+-------------
+Warning section
+--------------
+*/
+.warning{
+    padding-block: 2rem 5rem;
+    background-color: var(--clr-notification);
+    color: var(--clr-notification-grey);
+    text-align: center;
+}
+
+/* 
+-------------
+Footer section
+--------------
+*/
+footer{
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    padding-block: 3rem;
+}
+footer svg{
+    width: 2rem;
+}
+.footer-container{
+    --flow-spacer: 3rem;
+}
+.app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.app-container div{
+    border: 1px solid var(--clr-notification-grey);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    padding: .5rem;
+    width: 160px;
+}
+.app-container i{
+    font-size: 2rem;
+}
+.app-container p{
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-weight: var(--font-weight-md);
+}
+.app-container span{
+    font-size: .75rem;
+    font-weight: var(--font-weight-sm);
+}
+.footer__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer__menu div{
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+}
+.footer__menu a{
+    text-decoration: none;
+    color: var(--clr-text);
+    font-weight: var(--font-weight-md);
+    font-size: .875rem;
+}
+.footer__menu .title{
+    color: var(--clr-notification-grey);
+    margin-bottom: 1rem;
+}
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.footer__social{
+    display: flex;
+    column-gap: .5rem;
+}
+.footer__social i{
+    padding: .5rem;
+}
+.footer__logo{
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-weight-lg);
+}
+.footer__copyright{
+    display: flex;
+    column-gap: 1rem;
+}
+.footer__copyright p{
+    color: var(--clr-notification-grey);
+}
+.footer__copyright select {
+    background-color: transparent;
+    border: none;
+    color: var(--clr-text);
+}
+
+@media (min-width: 360px) {
+    .app-container{
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+@media(min-width: 960px) {
+    .footer__menu{
+        flex-direction: row;
+    }
+    .footer__links{
         flex-direction: row;
     }
 }
