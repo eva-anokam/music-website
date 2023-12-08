@@ -196,7 +196,7 @@ Hero section
     padding: 16px;
     border-radius: 12px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     column-gap: 15px;
     text-align: left;
 }
@@ -218,9 +218,18 @@ Hero section
 .notification--grey{
     color: var(--clr-notification-grey);
 }
-.lottie{
+.hero-img-container{
     display: flex;
     justify-content: center;
+    
+}
+.hero-img-container img{
+    width: 200px;
+}
+@media(min-width: 760px) {
+    .hero-img-container img{
+        width: 270px;
+    }
 }
 
 @media(min-width: 960px) {
@@ -230,6 +239,29 @@ Hero section
     .hero__notification > * + * {
     margin-top: 1.5rem;
 }
+    .hero-container{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .hero-text{
+        width: 60%;
+        --flow-spacer: 4rem;
+        padding-top: 4rem;
+    }
+    .hero__heading{
+        text-align: left;
+    }
+    .notification{
+        margin-inline: 0;
+    }
+    .hero-img-container{
+        background-color: purple;
+        justify-content: flex-end;
+    }
+    .hero-img-container img{
+        width: 350px;
+    }
 }
 /* 
 -------------
@@ -377,7 +409,7 @@ Offer section
     text-align: center;
 }
 .gift_card-heading {
-    font-size: 70px;
+    font-size: 40px;
     font-family: var(--font-family-hero);
 }
 
@@ -494,6 +526,9 @@ Offer section
         width: 200px;
         margin-left: -70px;
     }
+    .gift_card-heading{
+        font-size: 55px;
+    }
 }
 
 @media (min-width: 960px) {
@@ -506,6 +541,9 @@ Offer section
         width: 270px;
         height: 250px;
         margin-left: -100px;
+    }
+    .gift_card-heading{
+        font-size: 70px;
     }
 }
 
