@@ -465,7 +465,6 @@ Offer section
     margin-top: 2rem;
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
     flex: 2;
     margin-left: 3rem;
@@ -672,4 +671,101 @@ footer svg{
     .footer__links{
         flex-direction: row;
     }
+}
+.header-alt{
+    border: none;
+    background-color: var(--clr-notification);
+}
+.header .header-nav-alt{
+    justify-content: center;
+    
+}
+.main-alt{
+    background-color: var(--clr-notification);
+    color: var(--clr-text);
+    text-align: center;
+    --flow-spacer: 1rem;
+    padding-block: 2rem;
+    border-bottom: 2px solid var(--clr-tertiary);
+}
+.sign-up-text{
+    color: var(--clr-accent);
+    font-weight: var(--font-weight-lg);
+}
+.login-icon-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+.icon-container{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--clr-notification-grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+}
+.icon-container:hover, .icon-container:focus{
+    background-color: var(--clr-tertiary);
+}
+.text-or{
+    color: var(--clr-notification-grey);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 360px;
+    margin-inline: auto;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+label{
+    text-align: left;
+}
+.form-input input{
+    background-color: var(--clr-tertiary);
+    color: var(--clr-text);
+    border: none;
+    padding: .75rem .5rem;
+    border-radius: 10px;
+    transition: all .2s;
+}
+.form-input input:hover{
+    background-color: rgb(57, 56, 56);
+}
+.form-input input:focus{
+    outline: 2px solid var(--clr-accent);
+}
+form button{
+    margin-top: 1.5rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-text);
+    font-weight: var(--font-weight-lg);
+    border: none;
+    border-radius: 10px;
+    padding: .5rem;
+    transition: all .2s;
+}
+form button:hover{
+    background-color: #9128ee;
+}
+.forgot-password{
+    font-weight: var(--font-weight-lg);
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    border-radius: 10px;
+    transition: all .2s;
+}
+.forgot-password:hover{
+    background-color: var(--clr-tertiary);
+}
+.security-text{
+    color: var(--clr-notification-grey);
+    font-size: .75rem;
 }
