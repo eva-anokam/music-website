@@ -118,8 +118,29 @@ header{
     align-items: center;
     gap: 2rem;
 }
+
+.header__list-control input{
+    display: none;
+}
+.header__list-control input:checked ~ .header__list{
+    display: block;
+    background-color: var(--clr-primary);
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    text-align: center;
+    height: 100vh;
+    font-size: var(--font-size-sm);
+    padding-top: 4rem;
+    transition: all 2s linear;
+}
+
 .header__list{
     display: none;
+}
+
+.header__list > * + *{
+    margin-top: 2rem;
 }
 .header__list li a{
     transition: all .2s;
@@ -161,11 +182,15 @@ header{
 }
 
 @media (min-width: 960px) {
-    .header__list{
+    #header__list{
         display: flex;
+        align-items: center;
         gap: 2rem;
         padding: 0 2rem;
     }
+    .header__list > * + *{
+    margin-top: 0;
+}
 }
 
 /* 
@@ -673,7 +698,6 @@ footer svg{
     }
 }
 .header-alt{
-    border: none;
     background-color: var(--clr-notification);
 }
 .header .header-nav-alt{
@@ -688,9 +712,10 @@ footer svg{
     padding-block: 2rem;
     border-bottom: 2px solid var(--clr-tertiary);
 }
-.sign-up-text{
+.sign-up-text a{
     color: var(--clr-accent);
     font-weight: var(--font-weight-lg);
+    text-decoration: none;
 }
 .login-icon-container{
     display: flex;
@@ -724,11 +749,9 @@ form{
     display: flex;
     flex-direction: column;
     gap: .25rem;
-}
-label{
     text-align: left;
 }
-.form-input input{
+.form-input input, .form-input select{
     background-color: var(--clr-tertiary);
     color: var(--clr-text);
     border: none;
@@ -736,10 +759,11 @@ label{
     border-radius: 10px;
     transition: all .2s;
 }
-.form-input input:hover{
+
+.form-input input:hover, .form-input select:hover{
     background-color: rgb(57, 56, 56);
 }
-.form-input input:focus{
+.form-input input:focus, .form-input select:focus{
     outline: 2px solid var(--clr-accent);
 }
 form button{
@@ -755,6 +779,44 @@ form button{
 form button:hover{
     background-color: #9128ee;
 }
+.password-check{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+}
+.password-check svg{
+    width: 1.5rem;
+}
+.password-check svg path{
+    fill: var(--clr-notification-grey);
+}
+.password-validator{
+    display: none;
+}
+.password-icon-container{
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+.password-icon-container input{
+    display: none;
+}
+.password-icon-container input:checked ~ .password-validator{
+    display: block;
+}
+.password-validator{
+    position: absolute;
+    top: 100%;
+    left: -98px;
+    background-color: var(--clr-text);
+    color: var(--clr-primary);
+    padding: .5rem;
+    border-radius: 10px;
+    font-size: .75rem;
+    width: 360px;
+}
 .forgot-password{
     font-weight: var(--font-weight-lg);
     display: inline-block;
@@ -765,7 +827,12 @@ form button:hover{
 .forgot-password:hover{
     background-color: var(--clr-tertiary);
 }
-.security-text{
+.small-text{
     color: var(--clr-notification-grey);
     font-size: .75rem;
 }
+.form-input select{
+    padding-right: 3rem;
+    background-size: 400px 40px;
+}
+
