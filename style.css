@@ -166,10 +166,39 @@ header{
 .btn--transparent:hover{
     background-color: var(--clr-tertiary);
 }
+
 .header__icon-container{
     color: var(--clr-text);
     padding: .5rem 1.5rem;
     font-size: var(--font-size-md);
+}
+.header__icon-container div{
+    width: 40px;
+    height: 3px;
+    background-color: var(--clr-text);
+    border-radius: 10px;
+    transition: all .3s;
+}
+.header__icon-container .bar2{
+    width: 30px;
+    margin-inline: auto;
+}
+.header__icon-container .bar3{
+    width: 20px;
+    margin-inline: auto;
+}
+.header__icon-container > * + *{
+    margin-top: 10px;
+}
+#header-menu:checked ~ .header__label .header__icon-container .bar1{
+    transform: translateY(20px) rotate(-45deg);
+}
+#header-menu:checked ~ .header__label .header__icon-container .bar2{
+    opacity: 0;
+}
+#header-menu:checked ~ .header__label .header__icon-container .bar3{
+    transform:translateY(-7px) rotate(45deg);
+    width: 40px;
 }
 
 @media (min-width: 760px) {
@@ -191,6 +220,9 @@ header{
     .header__list > * + *{
     margin-top: 0;
 }
+    .login-link, .signup-link{
+        display: none;
+    }
 }
 
 /* 
@@ -744,6 +776,7 @@ form{
     gap: 1rem;
     max-width: 360px;
     margin-inline: auto;
+    position: relative;
 }
 .form-input{
     display: flex;
@@ -758,6 +791,7 @@ form{
     padding: .75rem .5rem;
     border-radius: 10px;
     transition: all .2s;
+
 }
 
 .form-input input:hover, .form-input select:hover{
@@ -795,7 +829,6 @@ form button:hover{
     display: none;
 }
 .password-icon-container{
-    position: relative;
     flex: 2;
     display: flex;
     justify-content: flex-end;
@@ -808,14 +841,14 @@ form button:hover{
 }
 .password-validator{
     position: absolute;
-    top: 100%;
-    left: -98px;
+    top: 50%;
+    left: 1%;
     background-color: var(--clr-text);
     color: var(--clr-primary);
     padding: .5rem;
     border-radius: 10px;
     font-size: .75rem;
-    width: 360px;
+    width: 100%;
 }
 .forgot-password{
     font-weight: var(--font-weight-lg);
