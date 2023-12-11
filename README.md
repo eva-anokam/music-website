@@ -63,7 +63,7 @@ This is a solution to the [cloning of the Deezer music website](https://deezer-c
 
 ## Acknowledgments
 
-We want to acknowledge the hardwork of our team members for their zealousness.We are grateful for the collaborative and supportive team environment fostered by each team member.
+We are grateful for the collaborative and supportive team environment fostered by each team member.Our project's success was largely due to the team's unity.
 - Anob-Ejah Takon 
 - Blessing Obasohan 
 - Chinyere Obeleagu 
