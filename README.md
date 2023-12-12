@@ -24,7 +24,8 @@ This is a solution to the [cloning of the Deezer music website](https://deezer-c
 
 ### Screenshot
 
-(/images/Deezer's%20screenshot.png)
+![](./images/Deezer's%20screenshot.png)
+
 
 ### Links
 
@@ -57,8 +58,6 @@ This is a solution to the [cloning of the Deezer music website](https://deezer-c
 - [Canva](https://www.canva.com/) - This is an amazing resource for the hero illustration.
 - [MDN](https://developer.mozilla.org/en-US/) - This is an amazing resource for the web development.
 - [W3 Schools](https://www.w3schools.com/) - This is an amazing resource for web development.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
